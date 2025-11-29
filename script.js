@@ -172,12 +172,31 @@ function processRepository(repo) {
         projectDescription = `Built using ${language} and other modern technologies.`;
     }
     
+    // Extract technologies from config, description, or use language as fallback
+    let technologies = [];
+    if (customConfig.technologies && Array.isArray(customConfig.technologies)) {
+        technologies = customConfig.technologies;
+    } else if (repo.technologies && Array.isArray(repo.technologies)) {
+        technologies = repo.technologies;
+    } else {
+        // Extract from description
+        technologies = extractTechnologies(projectDescription);
+        // Clean description to remove technologies section
+        projectDescription = cleanDescription(projectDescription);
+    }
+    
+    // If no technologies found, use language as fallback
+    if (technologies.length === 0 && repo.language) {
+        technologies = [repo.language];
+    }
+    
     return {
         id: repo.id,
         name: projectName,
         description: projectDescription,
         language: repo.language || 'Various',
         topics: repo.topics || [],
+        technologies: technologies,
         url: repo.html_url,
         private: repo.private,
         updatedAt: repo.updated_at,
@@ -191,6 +210,30 @@ function formatProjectName(name) {
         .split(/[-_]/)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
+}
+
+// Extract technologies from description text
+function extractTechnologies(description) {
+    if (!description) return [];
+    
+    // Look for "Technologies: ..." pattern
+    const techMatch = description.match(/Technologies:\s*([^.]+)/i);
+    if (techMatch) {
+        // Split by comma and clean up each technology
+        return techMatch[1]
+            .split(',')
+            .map(tech => tech.trim())
+            .filter(tech => tech.length > 0);
+    }
+    
+    return [];
+}
+
+// Remove technologies section from description
+function cleanDescription(description) {
+    if (!description) return description;
+    // Remove "Technologies: ..." part from description
+    return description.replace(/\s*Technologies:\s*[^.]+\.?\s*/i, '').trim();
 }
 
 // Client-side filter to ensure excluded repos don't show (safety check)
@@ -236,15 +279,15 @@ function renderProjects(projects) {
 }
 
 function createProjectCard(project) {
-    const tags = project.topics.slice(0, 5).map(topic => 
-        `<span class="tag">${topic}</span>`
+    // Create technology stack bubbles (blue bubbles)
+    const technologies = project.technologies || [];
+    const technologyBubbles = technologies.map(tech => 
+        `<span class="tech-bubble">${escapeHtml(tech)}</span>`
     ).join('');
     
-    const languageTag = project.language !== 'Various' 
-        ? `<span class="tag tag--primary">${project.language}</span>` 
+    const technologySection = technologies.length > 0 
+        ? `<div class="project-card__technologies">${technologyBubbles}</div>`
         : '';
-    
-    const allTags = languageTag + tags;
     
     // For private repos, show "Private Repo" text instead of GitHub link
     // For public repos, show GitHub link
@@ -258,7 +301,7 @@ function createProjectCard(project) {
         <div class="project-card">
             <h2 class="project-card__title">${escapeHtml(project.name)}</h2>
             <p class="project-card__description">${escapeHtml(project.description)}</p>
-            ${allTags ? `<div class="project-card__tags">${allTags}</div>` : ''}
+            ${technologySection}
             ${linkSection}
         </div>
     `;
@@ -335,10 +378,34 @@ async function init() {
                 
                 const customConfig = configKey ? projectConfigs[configKey] : {};
                 
+                // Extract technologies from config or existing project data
+                let technologies = [];
+                if (customConfig.technologies && Array.isArray(customConfig.technologies)) {
+                    technologies = customConfig.technologies;
+                } else if (project.technologies && Array.isArray(project.technologies)) {
+                    technologies = project.technologies;
+                } else {
+                    // Extract from description
+                    const description = customConfig.description || project.description || '';
+                    technologies = extractTechnologies(description);
+                }
+                
+                // Clean description if technologies were extracted from it
+                let description = customConfig.description || project.description || '';
+                if (technologies.length > 0 && !customConfig.technologies && !project.technologies) {
+                    description = cleanDescription(description);
+                }
+                
+                // Fallback to language if no technologies found
+                if (technologies.length === 0 && project.language) {
+                    technologies = [project.language];
+                }
+                
                 return {
                     ...project,
                     name: customConfig.name || project.name,
-                    description: customConfig.description || project.description
+                    description: description,
+                    technologies: technologies
                 };
             });
         }

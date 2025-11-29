@@ -290,6 +290,26 @@ body {
     border-color: var(--secondary-color);
 }
 
+/* Technology Stack Section */
+.project-card__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-bubble {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
 .project-card__link {
     margin-top: auto;
     padding-top: 15px;
