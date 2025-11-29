@@ -49,6 +49,7 @@ body {
     text-align: center;
     justify-content: center;
     width: 100%;
+    margin-left: -20px;
 }
 
 .profile-image {
