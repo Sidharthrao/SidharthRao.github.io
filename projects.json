@@ -1,16 +1,5 @@
 [
   {
-    "id": 1106520290,
-    "name": "SidharthRao.github.io",
-    "description": "A public project. Built using JavaScript and other modern technologies.",
-    "language": "JavaScript",
-    "dateRange": "Started Nov 2025",
-    "topics": [],
-    "url": "https://github.com/Sidharthrao/SidharthRao.github.io",
-    "private": false,
-    "updatedAt": "2025-11-29T13:58:37Z"
-  },
-  {
     "id": 1103624762,
     "name": "AnomalyDetection JournalEntries",
     "description": "A private project. Built using Python and other modern technologies.",
@@ -141,17 +130,6 @@
     "url": "https://github.com/Sidharthrao/ExecutorAssist-and-ImportantScript",
     "private": true,
     "updatedAt": "2025-07-06T08:29:44Z"
-  },
-  {
-    "id": 746777055,
-    "name": "ExpenseAccrual",
-    "description": "A private project. Built using Jupyter Notebook and other modern technologies.",
-    "language": "Jupyter Notebook",
-    "dateRange": "Jan 2024 - Jun 2025",
-    "topics": [],
-    "url": "https://github.com/Sidharthrao/ExpenseAccrual",
-    "private": true,
-    "updatedAt": "2025-06-04T16:09:47Z"
   },
   {
     "id": 884648967,
