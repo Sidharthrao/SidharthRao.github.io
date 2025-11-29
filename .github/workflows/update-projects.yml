@@ -100,13 +100,27 @@ jobs:
           // 'yet-another-repo'
         ];
         
+        // Helper function to format project names (used for exclusion matching)
+        function formatProjectName(name) {
+          return name
+            .split(/[-_]/)
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+        }
+        
         // Filter repositories
         const filtered = repos.filter(repo => {
           if (excludeForks && repo.fork) return false;
           if (excludeArchived && repo.archived) return false;
           if (excludePrivate && repo.private) return false;
           // Exclude specific repositories by name (case-insensitive)
-          if (excludeRepos.some(excluded => repo.name.toLowerCase() === excluded.toLowerCase())) {
+          // Check both original name and formatted name to handle exclusion list flexibility
+          const repoNameLower = repo.name.toLowerCase();
+          const formattedNameLower = formatProjectName(repo.name).toLowerCase();
+          if (excludeRepos.some(excluded => {
+            const excludedLower = excluded.toLowerCase();
+            return repoNameLower === excludedLower || formattedNameLower === excludedLower;
+          })) {
             return false;
           }
           return true;
@@ -114,12 +128,6 @@ jobs:
         
         // Process repositories
         const processed = filtered.map(repo => {
-          function formatProjectName(name) {
-            return name
-              .split(/[-_]/)
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
-          }
           
           function getDateRange(createdAt, updatedAt) {
             if (!createdAt) return 'Date not available';
