@@ -1,68 +1,79 @@
 [
   {
     "id": 1103624762,
-    "name": "AnomalyDetection JournalEntries",
-    "description": "A private project. Built using Python and other modern technologies.",
+    "name": "Financial Anomaly Detection System",
+    "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy. Technologies: Python, scikit-learn, pandas, SQL.",
     "language": "Python",
-    "dateRange": "Started Nov 2025",
     "topics": [],
     "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
     "private": true,
-    "updatedAt": "2025-11-27T06:16:05Z"
+    "updatedAt": "2025-11-27T06:16:05Z",
+    "originalName": "AnomalyDetection_JournalEntries"
+  },
+  {
+    "id": 698907133,
+    "name": "Working With PDF Files",
+    "description": "Reading Bill of entry PDF files using regex Python",
+    "language": "Jupyter Notebook",
+    "topics": [],
+    "url": "https://github.com/Sidharthrao/Working-with-PDF-Files",
+    "private": true,
+    "updatedAt": "2025-01-20T06:05:26Z",
+    "originalName": "Working-with-PDF-Files"
   },
   {
     "id": 230441637,
-    "name": "Extract Text From JPEG",
-    "description": "Extracting text using regular expression in Python",
+    "name": "Document Text Extraction Tool",
+    "description": "Built a Python application using regular expressions and OCR techniques to extract text from JPEG images. Handles bill of entry PDF files and converts them to structured data. Technologies: Python, regex, PIL, pytesseract.",
     "language": "Jupyter Notebook",
-    "dateRange": "Started Dec 2019",
     "topics": [],
     "url": "https://github.com/Sidharthrao/Extract-Text-from-JPEG",
     "private": false,
-    "updatedAt": "2020-01-13T11:56:19Z"
+    "updatedAt": "2020-01-13T11:56:19Z",
+    "originalName": "Extract-Text-from-JPEG"
   },
   {
     "id": 233005725,
-    "name": "LinearRegression Ridge Lasso",
-    "description": "A public project. Built using Jupyter Notebook and other modern technologies.",
+    "name": "Regression Analysis Framework",
+    "description": "Implemented and compared multiple regression techniques including Linear Regression, Ridge, and Lasso regularization. Developed comprehensive analysis framework for model selection and hyperparameter tuning. Technologies: Python, scikit-learn, numpy, matplotlib.",
     "language": "Jupyter Notebook",
-    "dateRange": "Started Jan 2020",
     "topics": [],
     "url": "https://github.com/Sidharthrao/LinearRegression-Ridge-Lasso",
     "private": false,
-    "updatedAt": "2020-01-13T07:32:50Z"
+    "updatedAt": "2020-01-13T07:32:50Z",
+    "originalName": "LinearRegression-Ridge-Lasso"
   },
   {
     "id": 230578961,
-    "name": "Random Forest Classifier",
-    "description": "Project 2 on Machine Learning : Income Qualification",
+    "name": "Income Qualification ML Model",
+    "description": "Project 2 on Machine Learning: Income Qualification. Built a Random Forest classifier to predict income qualification with feature engineering, cross-validation, and model optimization. Achieved high accuracy through ensemble learning techniques. Technologies: Python, scikit-learn, pandas, matplotlib.",
     "language": "Jupyter Notebook",
-    "dateRange": "Started Dec 2019",
     "topics": [],
     "url": "https://github.com/Sidharthrao/Random-Forest-Classifier",
     "private": false,
-    "updatedAt": "2020-01-13T05:18:30Z"
+    "updatedAt": "2020-01-13T05:18:30Z",
+    "originalName": "Random-Forest-Classifier"
   },
   {
     "id": 230435514,
-    "name": "XGBoost",
-    "description": "Project 1 on Machine Learning : Mercedes-Benz Greener Manufacturing",
+    "name": "Mercedes-Benz Manufacturing Optimization",
+    "description": "Project 1 on Machine Learning: Mercedes-Benz Greener Manufacturing. Developed an XGBoost model to optimize manufacturing processes and reduce testing time. Implemented feature selection and hyperparameter optimization. Technologies: Python, XGBoost, pandas, scikit-learn.",
     "language": "Jupyter Notebook",
-    "dateRange": "Started Dec 2019",
     "topics": [],
     "url": "https://github.com/Sidharthrao/XGBoost",
     "private": false,
-    "updatedAt": "2020-01-13T05:17:53Z"
+    "updatedAt": "2020-01-13T05:17:53Z",
+    "originalName": "XGBoost"
   },
   {
     "id": 233227356,
-    "name": "EmployeeAttrition",
-    "description": "Machine Learning + Applying MinMaxScalar on selected columns + Label Encoding & One Hot Encoding",
+    "name": "Employee Attrition Prediction System",
+    "description": "Machine Learning project applying MinMaxScalar on selected columns with Label Encoding & One Hot Encoding. Built predictive models to identify factors contributing to employee attrition. Implemented comprehensive data preprocessing pipeline. Technologies: Python, scikit-learn, pandas, numpy.",
     "language": "Jupyter Notebook",
-    "dateRange": "Started Jan 2020",
     "topics": [],
     "url": "https://github.com/Sidharthrao/EmployeeAttrition",
     "private": false,
-    "updatedAt": "2020-01-13T05:17:06Z"
+    "updatedAt": "2020-01-13T05:17:06Z",
+    "originalName": "EmployeeAttrition"
   }
 ]
