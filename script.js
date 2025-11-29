@@ -282,14 +282,6 @@ function renderProjects(projects) {
 function createProjectCard(project) {
     // Create technology stack bubbles (blue bubbles)
     const technologies = project.technologies || [];
-    
-    // Debug logging (remove after testing)
-    if (project.name === 'Financial Anomaly Detection System') {
-        console.log('Project:', project.name);
-        console.log('Technologies:', technologies);
-        console.log('Description:', project.description);
-    }
-    
     const technologyBubbles = technologies.map(tech => 
         `<span class="tech-bubble">${escapeHtml(tech)}</span>`
     ).join('');

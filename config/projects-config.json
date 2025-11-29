@@ -1,27 +1,38 @@
 {
   "AnomalyDetection_JournalEntries": {
     "name": "Financial Anomaly Detection System",
-    "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy. Technologies: Python, scikit-learn, pandas, SQL."
+    "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
+    "technologies": ["Python", "scikit-learn", "pandas", "SQL"]
   },
   "Extract-Text-from-JPEG": {
     "name": "Document Text Extraction Tool",
-    "description": "Built a Python application using regular expressions and OCR techniques to extract text from JPEG images. Handles bill of entry PDF files and converts them to structured data. Technologies: Python, regex, PIL, pytesseract."
+    "description": "Built a Python application using regular expressions and OCR techniques to extract text from JPEG images. Handles bill of entry PDF files and converts them to structured data.",
+    "technologies": ["Python", "regex", "PIL", "pytesseract"]
   },
   "LinearRegression-Ridge-Lasso": {
     "name": "Regression Analysis Framework",
-    "description": "Implemented and compared multiple regression techniques including Linear Regression, Ridge, and Lasso regularization. Developed comprehensive analysis framework for model selection and hyperparameter tuning. Technologies: Python, scikit-learn, numpy, matplotlib."
+    "description": "Implemented and compared multiple regression techniques including Linear Regression, Ridge, and Lasso regularization. Developed comprehensive analysis framework for model selection and hyperparameter tuning.",
+    "technologies": ["Python", "scikit-learn", "numpy", "matplotlib"]
   },
   "Random-Forest-Classifier": {
     "name": "Income Qualification ML Model",
-    "description": "Project 2 on Machine Learning: Income Qualification. Built a Random Forest classifier to predict income qualification with feature engineering, cross-validation, and model optimization. Achieved high accuracy through ensemble learning techniques. Technologies: Python, scikit-learn, pandas, matplotlib."
+    "description": "Project 2 on Machine Learning: Income Qualification. Built a Random Forest classifier to predict income qualification with feature engineering, cross-validation, and model optimization. Achieved high accuracy through ensemble learning techniques.",
+    "technologies": ["Python", "scikit-learn", "pandas", "matplotlib"]
   },
   "XGBoost": {
     "name": "Mercedes-Benz Manufacturing Optimization",
-    "description": "Project 1 on Machine Learning: Mercedes-Benz Greener Manufacturing. Developed an XGBoost model to optimize manufacturing processes and reduce testing time. Implemented feature selection and hyperparameter optimization. Technologies: Python, XGBoost, pandas, scikit-learn."
+    "description": "Project 1 on Machine Learning: Mercedes-Benz Greener Manufacturing. Developed an XGBoost model to optimize manufacturing processes and reduce testing time. Implemented feature selection and hyperparameter optimization.",
+    "technologies": ["Python", "XGBoost", "pandas", "scikit-learn"]
   },
   "EmployeeAttrition": {
     "name": "Employee Attrition Prediction System",
-    "description": "Machine Learning project applying MinMaxScalar on selected columns with Label Encoding & One Hot Encoding. Built predictive models to identify factors contributing to employee attrition. Implemented comprehensive data preprocessing pipeline. Technologies: Python, scikit-learn, pandas, numpy."
+    "description": "Machine Learning project applying MinMaxScalar on selected columns with Label Encoding & One Hot Encoding. Built predictive models to identify factors contributing to employee attrition. Implemented comprehensive data preprocessing pipeline.",
+    "technologies": ["Python", "scikit-learn", "pandas", "numpy"]
+  },
+  "Working-with-PDF-Files": {
+    "name": "Working With PDF Files",
+    "description": "Reading Bill of entry PDF files using regex Python",
+    "technologies": ["Python", "regex"]
   }
 }
 
