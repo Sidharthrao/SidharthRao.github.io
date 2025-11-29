@@ -12,6 +12,15 @@ window.config = {
     // These are kept here for local testing fallback only
     excludeForks: true,        // Exclude forked repositories
     excludeArchived: true,      // Exclude archived repositories
-    excludePrivate: false       // Set to true to exclude private repositories
+    excludePrivate: false,      // Set to true to exclude private repositories
+    
+    // List of repository names to exclude from the portfolio (case-insensitive)
+    // Add repository names here that you don't want to display
+    excludeRepos: [
+        'FSRA'
+        // Add more repository names here, e.g.:
+        // 'another-repo-name',
+        // 'yet-another-repo'
+    ]
 };
 

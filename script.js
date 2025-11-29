@@ -58,10 +58,17 @@ async function fetchRepositoriesFromAPI() {
 
 // Data Processing Functions (for local testing fallback)
 function filterRepositories(repos) {
+    // Get exclusion list from config, default to empty array
+    const excludeRepos = config.excludeRepos || [];
+    
     return repos.filter(repo => {
         if (config.excludeForks && repo.fork) return false;
         if (config.excludeArchived && repo.archived) return false;
         if (config.excludePrivate && repo.private) return false;
+        // Exclude specific repositories by name (case-insensitive)
+        if (excludeRepos.some(excluded => repo.name.toLowerCase() === excluded.toLowerCase())) {
+            return false;
+        }
         return true;
     });
 }

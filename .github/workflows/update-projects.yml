@@ -72,11 +72,24 @@ jobs:
         const excludeArchived = true;
         const excludePrivate = false;
         
+        // List of repository names to exclude from the portfolio (case-insensitive)
+        // Add repository names here that you don't want to display
+        const excludeRepos = [
+          'FSRA'
+          // Add more repository names here, e.g.:
+          // 'another-repo-name',
+          // 'yet-another-repo'
+        ];
+        
         // Filter repositories
         const filtered = repos.filter(repo => {
           if (excludeForks && repo.fork) return false;
           if (excludeArchived && repo.archived) return false;
           if (excludePrivate && repo.private) return false;
+          // Exclude specific repositories by name (case-insensitive)
+          if (excludeRepos.some(excluded => repo.name.toLowerCase() === excluded.toLowerCase())) {
+            return false;
+          }
           return true;
         });
         
