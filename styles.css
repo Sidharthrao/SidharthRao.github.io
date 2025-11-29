@@ -124,6 +124,22 @@ body {
     margin-bottom: 15px;
 }
 
+.about-content ol {
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-content li {
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+.about-content li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
 /* Repositories Section - Bottom Scrollable */
 .repositories-section {
     margin-top: 40px;
