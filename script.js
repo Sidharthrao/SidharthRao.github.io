@@ -216,14 +216,15 @@ function formatProjectName(name) {
 function extractTechnologies(description) {
     if (!description) return [];
     
-    // Look for "Technologies: ..." pattern
-    const techMatch = description.match(/Technologies:\s*([^.]+)/i);
-    if (techMatch) {
+    // Look for "Technologies: ..." pattern (match until period or end of string)
+    const techMatch = description.match(/Technologies:\s*([^.]*?)(?:\.|$)/i);
+    if (techMatch && techMatch[1]) {
         // Split by comma and clean up each technology
-        return techMatch[1]
+        const techs = techMatch[1]
             .split(',')
             .map(tech => tech.trim())
             .filter(tech => tech.length > 0);
+        return techs;
     }
     
     return [];
@@ -232,8 +233,8 @@ function extractTechnologies(description) {
 // Remove technologies section from description
 function cleanDescription(description) {
     if (!description) return description;
-    // Remove "Technologies: ..." part from description
-    return description.replace(/\s*Technologies:\s*[^.]+\.?\s*/i, '').trim();
+    // Remove "Technologies: ..." part from description (match until period or end of string)
+    return description.replace(/\s*Technologies:\s*[^.]*?\.?\s*/i, '').trim();
 }
 
 // Client-side filter to ensure excluded repos don't show (safety check)
