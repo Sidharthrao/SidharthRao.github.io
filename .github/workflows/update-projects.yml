@@ -97,7 +97,6 @@ jobs:
           'Custom Voicebot',
           'S4 HanaRecon',
           'ML-Applicability-POC-Projects',
-          'Working-with-PDF-Files',
           'Text_Analysis-Reclass',
           'IC_Revenue',
           'IC_Automation',
@@ -146,56 +145,47 @@ jobs:
           return true;
         });
         
+        // Load custom project configurations
+        let projectConfigs = {};
+        try {
+          if (fs.existsSync('config/projects-config.json')) {
+            projectConfigs = JSON.parse(fs.readFileSync('config/projects-config.json', 'utf8'));
+            console.log('Loaded custom project configurations');
+          }
+        } catch (error) {
+          console.warn('Could not load projects-config.json:', error.message);
+        }
+        
         // Process repositories
         const processed = filtered.map(repo => {
+          // Check for custom configuration
+          const configKey = repo.name; // Use original repo name as key
+          const customConfig = projectConfigs[configKey] || {};
           
-          function getDateRange(createdAt, updatedAt) {
-            if (!createdAt) return 'Date not available';
-            const created = new Date(createdAt);
-            const updated = new Date(updatedAt);
-            const createdFormatted = created.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-            const daysDiff = Math.floor((updated - created) / (1000 * 60 * 60 * 24));
-            if (daysDiff > 30) {
-              const updatedFormatted = updated.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-              return `${createdFormatted} - ${updatedFormatted}`;
-            }
-            return `Started ${createdFormatted}`;
-          }
+          // Use custom name if available, otherwise format the repo name
+          const projectName = customConfig.name || formatProjectName(repo.name);
           
-          function createBusinessDescription(repo) {
-            if (repo.description && repo.description.length > 0) {
-              const technicalTerms = ['api', 'framework', 'library', 'npm', 'package', 'module', 'component', 'hook', 'utils'];
-              const descriptionLower = repo.description.toLowerCase();
-              const isTechnical = technicalTerms.some(term => descriptionLower.includes(term));
-              if (!isTechnical || repo.description.length < 50) {
-                return repo.description;
-              }
-            }
+          // Use custom description if available, otherwise use repo description or generate one
+          let projectDescription;
+          if (customConfig.description) {
+            projectDescription = customConfig.description;
+          } else if (repo.description && repo.description.length > 0) {
+            projectDescription = repo.description;
+          } else {
             const language = repo.language || 'Various technologies';
-            const topics = repo.topics || [];
-            let description = `A ${repo.private ? 'private' : 'public'} project`;
-            if (topics.length > 0) {
-              const businessTopics = topics.filter(topic => 
-                !['javascript', 'typescript', 'python', 'java', 'react', 'node', 'api'].includes(topic.toLowerCase())
-              );
-              if (businessTopics.length > 0) {
-                description += ` focused on ${businessTopics.slice(0, 2).join(' and ')}`;
-              }
-            }
-            description += `. Built using ${language} and other modern technologies.`;
-            return description;
+            projectDescription = `Built using ${language} and other modern technologies.`;
           }
           
           return {
             id: repo.id,
-            name: formatProjectName(repo.name),
-            description: createBusinessDescription(repo),
+            name: projectName,
+            description: projectDescription,
             language: repo.language || 'Various',
-            dateRange: getDateRange(repo.created_at, repo.updated_at),
             topics: repo.topics || [],
             url: repo.html_url,
             private: repo.private,
-            updatedAt: repo.updated_at
+            updatedAt: repo.updated_at,
+            originalName: repo.name  // Store original repo name for config matching
           };
         });
         

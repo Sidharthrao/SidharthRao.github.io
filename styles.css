@@ -302,6 +302,12 @@ body {
     text-decoration: underline;
 }
 
+.private-repo-label {
+    color: var(--text-light);
+    font-weight: 500;
+    font-style: italic;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary-color);
