@@ -158,6 +158,25 @@ function formatProjectName(name) {
         .join(' ');
 }
 
+// Client-side filter to ensure excluded repos don't show (safety check)
+function filterExcludedProjects(projects) {
+    const excludeRepos = config.excludeRepos || [];
+    if (excludeRepos.length === 0) return projects;
+    
+    return projects.filter(project => {
+        // Check both the formatted name and try to match against exclusion list
+        const projectNameLower = project.name.toLowerCase();
+        const isExcluded = excludeRepos.some(excluded => {
+            const excludedLower = excluded.toLowerCase();
+            // Check exact match or if excluded name appears in project name
+            return projectNameLower === excludedLower || 
+                   projectNameLower.includes(excludedLower) ||
+                   excludedLower.includes(projectNameLower);
+        });
+        return !isExcluded;
+    });
+}
+
 // Rendering Functions
 function renderProjects(projects) {
     const container = document.getElementById('projects-container');
@@ -168,9 +187,12 @@ function renderProjects(projects) {
     error.style.display = 'none';
     
     if (!projects || projects.length === 0) {
-        container.innerHTML = '<p style="text-align: center; color: var(--text-light);">No projects found.</p>';
+        container.innerHTML = '<p style="text-align: center; color: var(--text-light); padding: 40px;">No projects found.</p>';
         return;
     }
+    
+    // Apply client-side exclusion filter (safety check)
+    projects = filterExcludedProjects(projects);
     
     // Sort projects by updated date (most recent first)
     projects.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));

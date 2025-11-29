@@ -15,12 +15,47 @@ window.config = {
     excludePrivate: false,      // Set to true to exclude private repositories
     
     // List of repository names to exclude from the portfolio (case-insensitive)
-    // Add repository names here that you don't want to display
+    // This should match the exclusion list in .github/workflows/update-projects.yml
     excludeRepos: [
-        'FSRA'
-        // Add more repository names here, e.g.:
-        // 'another-repo-name',
-        // 'yet-another-repo'
+        'FSRA',
+        'Som WorkAssist',
+        'SidharthRao.github.io',
+        'Important Scripts Practice',
+        'National Statistics Automation',
+        'Project Rogue',
+        'CAO PowerBI Project',
+        'GenAI CustomerServiceBot',
+        'ExecutorAssist And ImportantScript',
+        'ExpenseAccrual',
+        'MSDS Projects And Concepts',
+        'Automation Treasury',
+        'EndToEnd VendorWHTActivity',
+        'Vendor WHT',
+        'RCM InvoiceGeneration',
+        'TimeSeries SpecializedModels',
+        'AuditAssistant ChatBot',
+        'Model Fine Tuning',
+        'Project Dash',
+        'Custom Voicebot',
+        'S4 HanaRecon',
+        'ML-Applicability-POC-Projects',
+        'Working-with-PDF-Files',
+        'Text_Analysis-Reclass',
+        'IC_Revenue',
+        'IC_Automation',
+        'Finalyzer_DataIngestion2.0',
+        'Expense_Classification-and-Reclass',
+        'KPI-Dashboad',
+        'AAAMLP GuideForProjectFolders',
+        'Arithmetic_Algo',
+        'Base_ML-Scripts',
+        'Natural-Language-Processing',
+        'Intel-AI---MLOps',
+        'Flask_Basics',
+        'StockMarketAalysis',
+        'ICA WHT Reporting',
+        'expense_reclassification',
+        'Applying-feature-selection'
     ]
 };
 
