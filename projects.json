@@ -3,11 +3,11 @@
     "id": 1103624762,
     "name": "Financial Anomaly Detection System",
     "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
-    "language": "Python",
+    "language": "Jupyter Notebook",
     "topics": [],
     "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
     "private": true,
-    "updatedAt": "2025-11-27T06:16:05Z",
+    "updatedAt": "2025-12-01T19:01:17Z",
     "originalName": "AnomalyDetection_JournalEntries"
   },
   {
