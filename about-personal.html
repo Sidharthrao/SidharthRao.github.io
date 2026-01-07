@@ -187,10 +187,10 @@
         }
 
         .gallery-item {
-            aspect-ratio: 4/3;
+            aspect-ratio: 1/1;
             background: var(--bg-light);
             border-radius: 12px;
-            border: 2px dashed var(--border-color);
+            border: 2px solid var(--border-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -198,17 +198,20 @@
             font-size: 0.9rem;
             transition: var(--transition);
             overflow: hidden;
+            min-height: 280px;
         }
 
         .gallery-item:hover {
             border-color: var(--secondary-color);
-            background: rgba(52, 152, 219, 0.05);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            padding: 10px;
         }
 
         .gallery-placeholder {
@@ -294,34 +297,6 @@
             </div>
         </section>
 
-        <!-- Activities Section -->
-        <section class="activities-section">
-            <h2 class="section-title">Activities & Achievements</h2>
-            <div class="activities-list">
-                <div class="activity-item">
-                    <div class="activity-marker"></div>
-                    <div class="activity-content">
-                        <h4>[Activity/Achievement 1]</h4>
-                        <p class="placeholder-text">[Description of this activity or achievement]</p>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-marker"></div>
-                    <div class="activity-content">
-                        <h4>[Activity/Achievement 2]</h4>
-                        <p class="placeholder-text">[Description of this activity or achievement]</p>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-marker"></div>
-                    <div class="activity-content">
-                        <h4>[Activity/Achievement 3]</h4>
-                        <p class="placeholder-text">[Description of this activity or achievement]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Photo Gallery Section -->
         <section class="gallery-section">
             <h2 class="section-title">Photo Gallery</h2>
@@ -342,7 +317,7 @@
                     <img src="Image/About Me - Picture collection/Picture 5 - Scuba Tiny jelly fish.JPEG" alt="Tiny Jellyfish">
                 </div>
                 <div class="gallery-item">
-                    <img src="Image/About Me - Picture collection/Pic 6 - Jelly fish.HEIC" alt="Jellyfish">
+                    <img src="Image/About Me - Picture collection/Pic 6 - Jelly fish.jpg" alt="Jellyfish">
                 </div>
             </div>
         </section>
