@@ -1,5 +1,16 @@
 [
   {
+    "id": 1128768196,
+    "name": "Neuronwiselabs Cmd.github.io",
+    "description": "Built using HTML and other modern technologies.",
+    "language": "HTML",
+    "topics": [],
+    "url": "https://github.com/neuronwiselabs-cmd/neuronwiselabs-cmd.github.io",
+    "private": false,
+    "updatedAt": "2026-01-06T06:51:38Z",
+    "originalName": "neuronwiselabs-cmd.github.io"
+  },
+  {
     "id": 1103624762,
     "name": "Financial Anomaly Detection System",
     "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
