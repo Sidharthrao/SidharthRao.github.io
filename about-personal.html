@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal page of Sidharth Rao - hobbies, interests, and activities">
+    <title>About Me - Sidharth Rao</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Personal Page Specific Styles */
+        .personal-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .personal-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .personal-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .personal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            margin-bottom: 50px;
+        }
+
+        .bio-content {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .bio-content p {
+            margin-bottom: 15px;
+        }
+
+        .bio-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Placeholder text styling */
+        .placeholder-text {
+            color: var(--text-light);
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        /* Hobbies Section */
+        .hobbies-section {
+            margin-bottom: 50px;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .hobby-card {
+            background: var(--bg-color);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--secondary-color);
+        }
+
+        .hobby-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hobby-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .hobby-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            margin-bottom: 50px;
+        }
+
+        .activities-list {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-marker {
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .activity-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .activity-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Photo Gallery Section */
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--secondary-color);
+            background: rgba(52, 152, 219, 0.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-placeholder svg {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .personal-header {
+                padding: 40px 20px;
+            }
+
+            .personal-header h1 {
+                font-size: 2rem;
+            }
+
+            .personal-container {
+                padding: 20px;
+            }
+
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Back Navigation -->
+    <header class="personal-header">
+        <h1>Sidharth Rao</h1>
+        <p>Beyond the professional world - my interests, hobbies, and the things that inspire me.</p>
+        <a href="index.html" class="back-btn">Back to Portfolio</a>
+    </header>
+
+    <div class="personal-container">
+        <!-- Personal Bio Section -->
+        <section class="bio-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="bio-content">
+                <p class="placeholder-text">[Add your personal bio here - talk about yourself beyond work, your background, values, and what drives you.]</p>
+                <p class="placeholder-text">[You can include details about your hometown, education journey, or what led you to your current path.]</p>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="hobbies-section">
+            <h2 class="section-title">Hobbies & Interests</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">?</div>
+                    <h3>[Hobby 1]</h3>
+                    <p class="placeholder-text">[Brief description of this hobby]</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">?</div>
+                    <h3>[Hobby 2]</h3>
+                    <p class="placeholder-text">[Brief description of this hobby]</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">?</div>
+                    <h3>[Hobby 3]</h3>
+                    <p class="placeholder-text">[Brief description of this hobby]</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">?</div>
+                    <h3>[Hobby 4]</h3>
+                    <p class="placeholder-text">[Brief description of this hobby]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="activities-section">
+            <h2 class="section-title">Activities & Achievements</h2>
+            <div class="activities-list">
+                <div class="activity-item">
+                    <div class="activity-marker"></div>
+                    <div class="activity-content">
+                        <h4>[Activity/Achievement 1]</h4>
+                        <p class="placeholder-text">[Description of this activity or achievement]</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-marker"></div>
+                    <div class="activity-content">
+                        <h4>[Activity/Achievement 2]</h4>
+                        <p class="placeholder-text">[Description of this activity or achievement]</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-marker"></div>
+                    <div class="activity-content">
+                        <h4>[Activity/Achievement 3]</h4>
+                        <p class="placeholder-text">[Description of this activity or achievement]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 1]</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 2]</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 3]</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 4]</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 5]</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>[Photo 6]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Sidharth Rao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+

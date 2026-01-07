@@ -108,6 +108,27 @@ body {
     height: 20px;
 }
 
+/* About Me Button */
+.about-me-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.about-me-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
 /* Right Column: About Section */
 .about-section {
     padding: 20px 0;
@@ -147,6 +168,66 @@ body {
 .about-content li strong {
     color: var(--primary-color);
     font-weight: 600;
+}
+
+/* Technology Stack Section */
+.tech-stack-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.tech-stack-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tech-card {
+    background: var(--bg-color);
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: default;
+}
+
+.tech-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.tech-details {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.tech-details strong {
+    color: var(--primary-color);
 }
 
 /* Repositories Section - Bottom Scrollable */
@@ -265,6 +346,33 @@ body {
     font-weight: 600;
     margin-right: 5px;
     color: var(--text-color);
+}
+
+/* Project Features List (Bullet Points) */
+.project-features {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.project-features li {
+    color: var(--text-light);
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.project-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
 }
 
 .project-card__tags {

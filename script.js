@@ -190,6 +190,9 @@ function processRepository(repo) {
         technologies = [repo.language];
     }
     
+    // Get features from custom config
+    const features = customConfig.features || [];
+    
     return {
         id: repo.id,
         name: projectName,
@@ -197,6 +200,7 @@ function processRepository(repo) {
         language: repo.language || 'Various',
         topics: repo.topics || [],
         technologies: technologies,
+        features: features,
         url: repo.html_url,
         private: repo.private,
         updatedAt: repo.updated_at,
@@ -290,6 +294,14 @@ function createProjectCard(project) {
         ? `<div class="project-card__technologies">${technologyBubbles}</div>`
         : '';
     
+    // Create features list (bullet points)
+    const features = project.features || [];
+    const featuresList = features.length > 0
+        ? `<ul class="project-features">${features.map(feature => 
+            `<li>${escapeHtml(feature)}</li>`
+          ).join('')}</ul>`
+        : '';
+    
     // For private repos, show "Private Repo" text instead of GitHub link
     // For public repos, show GitHub link
     const linkSection = project.private 
@@ -302,6 +314,7 @@ function createProjectCard(project) {
         <div class="project-card">
             <h2 class="project-card__title">${escapeHtml(project.name)}</h2>
             <p class="project-card__description">${escapeHtml(project.description)}</p>
+            ${featuresList}
             ${technologySection}
             ${linkSection}
         </div>
@@ -402,11 +415,15 @@ async function init() {
                     technologies = [project.language];
                 }
                 
+                // Get features from config
+                const features = customConfig.features || project.features || [];
+                
                 return {
                     ...project,
                     name: customConfig.name || project.name,
                     description: description,
-                    technologies: technologies
+                    technologies: technologies,
+                    features: features
                 };
             });
         }
