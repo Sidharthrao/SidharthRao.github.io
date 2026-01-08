@@ -1,6 +1,6 @@
 {
   "AnomalyDetection_JournalEntries": {
-    "name": "Financial Anomaly Detection System",
+    "name": "Journal Entries - Anomaly Detection System",
     "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
     "technologies": ["Python", "scikit-learn", "pandas", "SQL"],
     "features": [
@@ -8,7 +8,9 @@
       "Statistical analysis",
       "Automated flagging",
       "95% accuracy"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
+    "private": true
   },
   "Extract-Text-from-JPEG": {
     "name": "Document Text Extraction Tool",
@@ -19,7 +21,9 @@
       "Regex parsing",
       "Structured data output",
       "PDF processing"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/Extract-Text-from-JPEG",
+    "private": false
   },
   "LinearRegression-Ridge-Lasso": {
     "name": "Regression Analysis Framework",
@@ -30,7 +34,9 @@
       "Ridge & Lasso regularization",
       "Hyperparameter tuning",
       "Model comparison"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/LinearRegression-Ridge-Lasso",
+    "private": false
   },
   "Random-Forest-Classifier": {
     "name": "Income Qualification ML Model",
@@ -41,7 +47,9 @@
       "Feature engineering",
       "Cross-validation",
       "Ensemble learning"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/Random-Forest-Classifier",
+    "private": false
   },
   "XGBoost": {
     "name": "Mercedes-Benz Manufacturing Optimization",
@@ -52,7 +60,9 @@
       "Process optimization",
       "Feature selection",
       "Hyperparameter tuning"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/XGBoost",
+    "private": false
   },
   "EmployeeAttrition": {
     "name": "Employee Attrition Prediction System",
@@ -63,7 +73,9 @@
       "Data preprocessing",
       "Label & One Hot Encoding",
       "Attrition factors analysis"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/EmployeeAttrition",
+    "private": false
   },
   "Working-with-PDF-Files": {
     "name": "Working With PDF Files",
@@ -73,6 +85,8 @@
       "PDF file parsing",
       "Regex extraction",
       "Bill of entry processing"
-    ]
+    ],
+    "url": "https://github.com/Sidharthrao/Working-with-PDF-Files",
+    "private": true
   }
 }
