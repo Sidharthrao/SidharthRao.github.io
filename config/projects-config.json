@@ -44,16 +44,14 @@
   },
   
   "IC_Automation": {
-    "name": "InterCompany AutoFlow - End-to-End IC Reconciliation System",
-    "description": "Built an end-to-end intercompany automation framework for SAP-based financial reconciliation. The system automates SAP data extraction, applies NLP-based transaction classification using 25+ rule-based categories, computes WHT (Withholding Tax) and GST liabilities with interest calculations, identifies contra entries through multi-logic grouping, and generates settlement and RP Summary reports with automated approval workflows.",
+    "name": "Inter-Company Automation (End-to-End)",
+    "description": "Built an end-to-end intercompany automation framework for SAP-based financial reconciliation. The system automates SAP data extraction, to final reporting ",
     "technologies": ["Python", "pandas", "NumPy", "NLTK", "Tkinter", "openpyxl", "VBScript", "SAP", "win32com", "Regex"],
     "features": [
       "Automated SAP ledger data extraction via VBScript",
       "NLP-based transaction classification (25+ categories)",
-      "WHT applicability & computation with interest calculation",
-      "GST (IGST/CGST/SGST) computation engine",
+      "Withholding Tax and GST liabilities computation",
       "Multi-logic contra entry identification",
-      "Match & Clear solution for expat payroll reconciliation",
       "FDN tracking and period-wise consolidation",
       "Settlement & RP Summary report generation",
       "Combined entry identification",
