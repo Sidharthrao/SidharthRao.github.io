@@ -189,8 +189,9 @@ body {
 }
 
 .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin-bottom: 20px;
 }
@@ -207,6 +208,7 @@ body {
     border: 1px solid var(--border-color);
     transition: var(--transition);
     cursor: default;
+    min-width: 140px;
 }
 
 .tech-card:hover {
