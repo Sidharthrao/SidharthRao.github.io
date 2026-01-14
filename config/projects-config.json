@@ -29,15 +29,14 @@
     },
     "Model_FineTuning_TransactionMatching": {
         "name": "Reconciliation - Transaction Matching - LLM Fine-Tuning System (WIP)",
-        "description": "Fine-tuned a Mistral 7B LLM using LoRA/QLoRA to automate financial transaction reconciliation. The system matches transactions from sub-ledgers to General Ledger closing balances based on Company Code, G/L Account, and Profit Center, targeting 90%+ accuracy and 80-90% reduction in manual reconciliation effort.",
+        "description": "Fine-tuned Mistral 7B LLM with LoRA/QLoRA for automated financial transaction reconciliation, matching sub-ledger to GL closing balances by Company Code, G/L Account, and Profit Center. Targets 90%+ accuracy and 80-90% manual effort reduction.",
         "technologies": ["Python", "PyTorch", "Hugging Face Transformers", "PEFT (LoRA/QLoRA)", "pandas", "bitsandbytes", "Accelerate"],
         "features": [
             "Mistral 7B fine-tuning with LoRA adapters",
             "QLoRA 4-bit quantization for memory efficiency",
             "Aggregated transaction-to-balance matching",
             "Instruction-following prompts (Alpaca format)",
-            "Automated data cleaning and validation pipeline",
-            ">90% accuracy target"
+            "Automated data cleaning and validation pipeline"
         ],
         "url": "https://github.com/Sidharthrao/Model_Fine-Tuning",
         "private": true
