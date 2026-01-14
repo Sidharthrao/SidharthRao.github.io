@@ -21,8 +21,7 @@
         "features": [
             "Statistical analysis",
             "Isolation forest algorithm *",
-            "Automated flagging",
-            "95% accuracy"
+            "Automated flagging"
         ],
         "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
         "private": true
@@ -34,9 +33,7 @@
         "features": [
             "Mistral 7B fine-tuning with LoRA adapters",
             "QLoRA 4-bit quantization for memory efficiency",
-            "Aggregated transaction-to-balance matching",
-            "Instruction-following prompts (Alpaca format)",
-            "Automated data cleaning and validation pipeline"
+            "Aggregated transaction-to-balance matching"
         ],
         "url": "https://github.com/Sidharthrao/Model_Fine-Tuning",
         "private": true
@@ -49,10 +46,7 @@
             "Automated SAP ledger data extraction via VBScript",
             "NLP-based transaction classification (25+ categories)",
             "Withholding Tax and GST liabilities computation",
-            "Multi-logic contra entry identification",
-            "FDN tracking and period-wise consolidation",
             "Settlement & RP Summary report generation",
-            "Combined entry identification",
             "GUI-based workflow with approval automation"
         ],
         "url": "https://github.com/Sidharthrao/IC_Automation",
