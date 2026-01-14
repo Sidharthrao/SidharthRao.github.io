@@ -14,6 +14,25 @@
         "url": "https://github.com/Sidharthrao/AuditAssistant_ChatBot",
         "private": true
     },
+    "LLM-Journey_2.0": {
+        "name": "LLM Learning Repository - Comprehensive LLM Implementation Guide",
+        "description": "A comprehensive learning repository covering essential Large Language Model (LLM) concepts, implementations, and practical applications. Features hands-on notebooks and tutorials for chunking strategies, RAG systems, fine-tuning techniques, and AI agent development.",
+        "technologies": ["Python", "LangChain", "LangGraph", "Hugging Face Transformers", "PyTorch", "PEFT/LoRA", "ChromaDB", "LanceDB", "LlamaIndex", "OpenAI API", "Anthropic API", "PostgreSQL", "Streamlit", "TRL", "WandB"],
+        "features": [
+            "Advanced chunking strategies (character, recursive, semantic, agentic)",
+            "Basic RAG with web scraping and PDF processing",
+            "Multimodal RAG with video/image processing",
+            "PEFT/LoRA fine-tuning (Flan-T5, TinyLlama)",
+            "Advanced fine-tuning with TRL and SFT",
+            "LangGraph stateful multi-actor applications",
+            "SQL agents for database query generation",
+            "Competitor analysis agents with web scraping",
+            "ROUGE/BLEU evaluation metrics",
+            "Experiment tracking with WandB"
+        ],
+        "url": "https://github.com/Sidharthrao/LLM-Journey_2.0",
+        "private": false
+    },
     "AnomalyDetection_JournalEntries": {
         "name": "Journal Entries - Anomaly Detection System",
         "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
