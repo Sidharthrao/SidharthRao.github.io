@@ -115,5 +115,20 @@
         ],
         "url": "https://github.com/Sidharthrao/ML-Regression_Tutorial",
         "private": false
+    },
+    "ML-TimeSeries_Tutorial": {
+        "name": "Advanced Time Series Forecasting Pipeline",
+        "description": "Comprehensive production-ready time series framework implementing classical (ARIMA/ETS), ML (XGBoost/RF), and multivariate Deep Learning (LSTM/GRU) models. Features automated pipelines for stationarity testing, concept drift detection, and recursive feature elimination.",
+        "technologies": ["Python", "TensorFlow/Keras", "Statsmodels", "Scikit-learn", "XGBoost", "Facebook Prophet", "Pandas"],
+        "features": [
+            "Multivariate Deep Learning (LSTM/GRU)",
+            "Automated Stationarity Testing (ADF/KPSS)",
+            "Concept Drift Detection (PSI/KS Tests)",
+            "Recursive Feature Elimination (RFE)",
+            "Walk-forward Cross-Validation",
+            "Hybrid Modeling Approaches"
+        ],
+        "url": "https://github.com/Sidharthrao/ML-TimeSeries_Tutorial",
+        "private": false
     }
 }
