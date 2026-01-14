@@ -1,142 +1,119 @@
 {
     "AuditAssistant_ChatBot": {
-      "name": "AI Conversation Bot - Contract Intelligence System",
-      "description": "Developed an AI document analysis system integrating LangChain RAG with Neo4j Graph RAG for contract review and compliance evaluation. Features entity extraction with provenance tracking, hybrid search, and ASC606/SOX compliance frameworks.",
-      "technologies": ["Python", "LangChain", "Neo4j", "FastAPI", "Streamlit", "OpenAI API", "ChromaDB"],
-      "features": [
-        "Graph RAG with knowledge graph",
-        "Contract entity extraction *",
-        "ASC606/SOX compliance evaluation",
-        "Hybrid search (vector + graph)",
-        "Provenance tracking",
-        "Privacy-first local model support"
-      ],
-      "url": "https://github.com/Sidharthrao/AuditAssistant_ChatBot",
-      "private": true
-  },
-  "AnomalyDetection_JournalEntries": {
-    "name": "Journal Entries - Anomaly Detection System",
-    "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
-    "technologies": ["Python", "scikit-learn", "pandas", "SQL"],
-    "features": [
-      "Statistical analysis",
-      "Isolation forest algorithm *",
-      "Automated flagging",
-      "95% accuracy"
-    ],
-    "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
-    "private": true
-  },
-  "Model_FineTuning_TransactionMatching": {
-    "name": "Reconciliation - Transaction Matching - LLM Fine-Tuning System (WIP)",
-    "description": "Fine-tuned a Mistral 7B LLM using LoRA/QLoRA to automate financial transaction reconciliation. The system matches transactions from sub-ledgers to General Ledger closing balances based on Company Code, G/L Account, and Profit Center, targeting 90%+ accuracy and 80-90% reduction in manual reconciliation effort.",
-    "technologies": ["Python", "PyTorch", "Hugging Face Transformers", "PEFT (LoRA/QLoRA)", "pandas", "bitsandbytes", "Accelerate"],
-    "features": [
-      "Mistral 7B fine-tuning with LoRA adapters",
-      "QLoRA 4-bit quantization for memory efficiency",
-      "Aggregated transaction-to-balance matching",
-      "Instruction-following prompts (Alpaca format)",
-      "Automated data cleaning and validation pipeline",
-      ">90% accuracy target"
-    ],
-    "url": "https://github.com/Sidharthrao/Model_Fine-Tuning",
-    "private": true 
-  },
-  
-  "IC_Automation": {
-    "name": "Inter-Company Automation (End-to-End)",
-    "description": "Built an end-to-end intercompany automation framework for SAP-based financial reconciliation. The system automates SAP data extraction, to final reporting ",
-    "technologies": ["Python", "pandas", "NumPy", "NLTK", "Tkinter", "openpyxl", "VBScript", "SAP", "win32com", "Regex"],
-    "features": [
-      "Automated SAP ledger data extraction via VBScript",
-      "NLP-based transaction classification (25+ categories)",
-      "Withholding Tax and GST liabilities computation",
-      "Multi-logic contra entry identification",
-      "FDN tracking and period-wise consolidation",
-      "Settlement & RP Summary report generation",
-      "Combined entry identification",
-      "GUI-based workflow with approval automation"
-    ],
-    "url": "https://github.com/Sidharthrao/IC_Automation",
-    "private": true
-  },
-
-  "Working-with-PDF-Files": {
-    "name": "Working With PDF Files",
-    "description": "Reading Bill of entry PDF files using regex Python, merge operations and more.",
-    "technologies": ["Python", "regex"],
-    "features": [
-      "PDF file parsing",
-      "Regex extraction",
-      "Bill of entry processing"
-    ],
-    "url": "https://github.com/Sidharthrao/Working-with-PDF-Files",
-    "private": true
-  },
-  "Extract-Text-from-JPEG": {
-    "name": "Document Text Extraction Tool",
-    "description": "Built a Python application using regular expressions and OCR techniques to extract text from JPEG images. Handles bill of entry PDF files and converts them to structured data.",
-    "technologies": ["Python", "regex", "PIL", "pytesseract"],
-    "features": [
-      "OCR text extraction",
-      "Regex parsing",
-      "Structured data output",
-      "PDF processing"
-    ],
-    "url": "https://github.com/Sidharthrao/Extract-Text-from-JPEG",
-    "private": false
-  },
-  "LinearRegression-Ridge-Lasso": {
-    "name": "Project - Regression Analysis Framework",
-    "description": "Implemented and compared multiple regression techniques including Linear Regression, Ridge, and Lasso regularization. Developed comprehensive analysis framework for model selection and hyperparameter tuning.",
-    "technologies": ["Python", "scikit-learn", "numpy", "matplotlib"],
-    "features": [
-      "Multiple regression techniques",
-      "Ridge & Lasso regularization",
-      "Hyperparameter tuning",
-      "Model comparison"
-    ],
-    "url": "https://github.com/Sidharthrao/LinearRegression-Ridge-Lasso",
-    "private": false
-  },
-  "Random-Forest-Classifier": {
-    "name": "Project - Income Qualification ML Model",
-    "description": "Project 2 on Machine Learning: Income Qualification. Built a Random Forest classifier to predict income qualification with feature engineering, cross-validation, and model optimization. Achieved high accuracy through ensemble learning techniques.",
-    "technologies": ["Python", "scikit-learn", "pandas", "matplotlib"],
-    "features": [
-      "Random Forest classifier",
-      "Feature engineering",
-      "Cross-validation",
-      "Ensemble learning"
-    ],
-    "url": "https://github.com/Sidharthrao/Random-Forest-Classifier",
-    "private": false
-  },
-  "XGBoost": {
-    "name": "Project - Mercedes-Benz Manufacturing Optimization",
-    "description": "Project 1 on Machine Learning: Mercedes-Benz Greener Manufacturing. Developed an XGBoost model to optimize manufacturing processes and reduce testing time. Implemented feature selection and hyperparameter optimization.",
-    "technologies": ["Python", "XGBoost", "pandas", "scikit-learn"],
-    "features": [
-      "XGBoost model",
-      "Process optimization",
-      "Feature selection",
-      "Hyperparameter tuning"
-    ],
-    "url": "https://github.com/Sidharthrao/XGBoost",
-    "private": false
-  },
-  "EmployeeAttrition": {
-    "name": "Project - Employee Attrition Prediction System",
-    "description": "Machine Learning project applying MinMaxScalar on selected columns with Label Encoding & One Hot Encoding. Built predictive models to identify factors contributing to employee attrition. Implemented comprehensive data preprocessing pipeline.",
-    "technologies": ["Python", "scikit-learn", "pandas", "numpy"],
-    "features": [
-      "Predictive modeling",
-      "Data preprocessing",
-      "Label & One Hot Encoding",
-      "Attrition factors analysis"
-    ],
-    "url": "https://github.com/Sidharthrao/EmployeeAttrition",
-    "private": false
-  }
-  
+        "name": "AI Conversation Bot - Contract Intelligence System",
+        "description": "Developed an AI document analysis system integrating LangChain RAG with Neo4j Graph RAG for contract review and compliance evaluation. Features entity extraction with provenance tracking, hybrid search, and ASC606/SOX compliance frameworks.",
+        "technologies": ["Python", "LangChain", "Neo4j", "FastAPI", "Streamlit", "OpenAI API", "ChromaDB"],
+        "features": [
+            "Graph RAG with knowledge graph",
+            "Contract entity extraction *",
+            "ASC606/SOX compliance evaluation",
+            "Hybrid search (vector + graph)",
+            "Provenance tracking",
+            "Privacy-first local model support"
+        ],
+        "url": "https://github.com/Sidharthrao/AuditAssistant_ChatBot",
+        "private": true
+    },
+    "AnomalyDetection_JournalEntries": {
+        "name": "Journal Entries - Anomaly Detection System",
+        "description": "Developed a machine learning-based anomaly detection system for journal entries using isolation forests and statistical analysis. Implemented automated flagging of unusual transactions with 95% accuracy.",
+        "technologies": ["Python", "scikit-learn", "pandas", "SQL"],
+        "features": [
+            "Statistical analysis",
+            "Isolation forest algorithm *",
+            "Automated flagging",
+            "95% accuracy"
+        ],
+        "url": "https://github.com/Sidharthrao/AnomalyDetection_JournalEntries",
+        "private": true
+    },
+    "Model_FineTuning_TransactionMatching": {
+        "name": "Reconciliation - Transaction Matching - LLM Fine-Tuning System (WIP)",
+        "description": "Fine-tuned a Mistral 7B LLM using LoRA/QLoRA to automate financial transaction reconciliation. The system matches transactions from sub-ledgers to General Ledger closing balances based on Company Code, G/L Account, and Profit Center, targeting 90%+ accuracy and 80-90% reduction in manual reconciliation effort.",
+        "technologies": ["Python", "PyTorch", "Hugging Face Transformers", "PEFT (LoRA/QLoRA)", "pandas", "bitsandbytes", "Accelerate"],
+        "features": [
+            "Mistral 7B fine-tuning with LoRA adapters",
+            "QLoRA 4-bit quantization for memory efficiency",
+            "Aggregated transaction-to-balance matching",
+            "Instruction-following prompts (Alpaca format)",
+            "Automated data cleaning and validation pipeline",
+            ">90% accuracy target"
+        ],
+        "url": "https://github.com/Sidharthrao/Model_Fine-Tuning",
+        "private": true
+    },
+    "IC_Automation": {
+        "name": "Inter-Company Automation (End-to-End)",
+        "description": "Built an end-to-end intercompany automation framework for SAP-based financial reconciliation. The system automates SAP data extraction, to final reporting ",
+        "technologies": ["Python", "pandas", "NumPy", "NLTK", "Tkinter", "openpyxl", "VBScript", "SAP", "win32com", "Regex"],
+        "features": [
+            "Automated SAP ledger data extraction via VBScript",
+            "NLP-based transaction classification (25+ categories)",
+            "Withholding Tax and GST liabilities computation",
+            "Multi-logic contra entry identification",
+            "FDN tracking and period-wise consolidation",
+            "Settlement & RP Summary report generation",
+            "Combined entry identification",
+            "GUI-based workflow with approval automation"
+        ],
+        "url": "https://github.com/Sidharthrao/IC_Automation",
+        "private": true
+    },
+    "Working-with-PDF-Files": {
+        "name": "Working With PDF Files",
+        "description": "Reading Bill of entry PDF files using regex Python, merge operations and more.",
+        "technologies": ["Python", "regex"],
+        "features": [
+            "PDF file parsing",
+            "Regex extraction",
+            "Bill of entry processing"
+        ],
+        "url": "https://github.com/Sidharthrao/Working-with-PDF-Files",
+        "private": true
+    },
+    "ML-Classification_Tutorial": {
+        "name": "Advanced Fraud Detection Pipeline",
+        "description": "Engineered a production-grade machine learning system for financial fraud detection on 6M+ transactions. Implements a modular pipeline with 10+ classification algorithms, advanced feature engineering, and automated drift detection for robust performance.",
+        "technologies": ["Python", "XGBoost", "LightGBM", "Scikit-learn", "Flask", "Optuna", "SHAP"],
+        "features": [
+            "Modular end-to-end ML architecture",
+            "Multi-model support (XGBoost, SVM, MLP, etc.)",
+            "Advanced imbalance handling (SMOTE)",
+            "Real-time data drift detection",
+            "Automated feature selection (RFE)",
+            "Comprehensive 20+ metric evaluation framework"
+        ],
+        "url": "https://github.com/Sidharthrao/ML-Classification_Tutorial",
+        "private": false
+    },
+    "ML_Clustering_Tutorial": {
+        "name": "E-commerce Customer Segmentation - Clustering ML Pipeline",
+        "description": "Built an industry-ready unsupervised learning pipeline for customer segmentation on 1M+ e-commerce events. Implements hybrid clustering approaches with stability analysis and advanced feature engineering to identify actionable customer personas.",
+        "technologies": ["Python", "Scikit-learn", "Pandas", "HDBSCAN", "NumPy", "Joblib"],
+        "features": [
+            "Multi-algorithm clustering (K-Means, GMM, Spectral, HDBSCAN)",
+            "Stability analysis via bootstrapping (ARI scores)",
+            "Advanced feature engineering (RFM, Behavioral, Categorical Embeddings)",
+            "Automated optimal K selection pipeline",
+            "Production-grade logging and modular architecture",
+            "Comprehensive evaluation & profiling reports"
+        ],
+        "url": "https://github.com/Sidharthrao/ML-Clustering_Tutorial",
+        "private": false
+    },
+    "Electric_Motor_Temp_Prediction": {
+        "name": "Electric Motor Temperature Prediction System",
+        "description": "End-to-end machine learning regression pipeline for predicting internal motor component temperatures. Designed for production with modular architecture, preventing data leakage via group-based validation, and automated monitoring.",
+        "technologies": ["Python", "XGBoost", "LightGBM", "Flask", "Scikit-learn", "Optuna", "Pandas"],
+        "features": [
+            "Modular production-ready pipeline",
+            "Automated feature engineering & selection",
+            "Group-based (Profile ID) Cross-Validation",
+            "Data drift detection (PSI) & monitoring",
+            "Real-time Inference API",
+            "Optuna hyperparameter tuning"
+        ],
+        "url": "https://github.com/Sidharthrao/ML-Regression_Tutorial",
+        "private": false
+    }
 }
